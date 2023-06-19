@@ -1,4 +1,8 @@
 const pow = (num, degree) => {
+  if (typeof num !== "number" || typeof degree !== "number") {
+    return "Incorrect entered values";
+  }
+
   if (num === 0) {
     return 0;
   }
@@ -14,4 +18,4 @@ const pow = (num, degree) => {
   return num * pow(num, degree - 1);
 };
 
-console.log(pow(-2, 5));
+console.log(pow(2, 5));
