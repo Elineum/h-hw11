@@ -3,6 +3,8 @@ const pow = (num, degree) => {
     typeof num !== "number" ||
     typeof degree !== "number" ||
     !Number.isInteger(degree) ||
+    Number.isNaN(num) ||
+    Number.isNaN(degree) ||
     degree < 0
   ) {
     return "Incorrect entered values";
@@ -23,4 +25,4 @@ const pow = (num, degree) => {
   return num * pow(num, degree - 1);
 };
 
-console.log(pow(2, 3));
+console.log(pow(NaN, 5));
